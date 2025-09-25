@@ -1,0 +1,16 @@
+body, html, #root, .App {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: 'Inter', Arial, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.App {
+  width: 100vw;
+  min-height: 100vh;
+}
+.section {
+  scroll-snap-align: start;
+}
