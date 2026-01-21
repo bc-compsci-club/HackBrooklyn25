@@ -4,14 +4,12 @@
   position: relative;
   scroll-snap-align: start;
 }
+
 .section-content {
-  padding: 2rem 3rem;
-  border-radius: 1rem;
-  max-width: min(90vw, 960px);
-  position: absolute;
-  pointer-events: auto;
+  padding: 2rem;
 }
+
 .section h1 {
-  font-size: 5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
 }

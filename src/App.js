@@ -14,27 +14,15 @@ function App() {
   return (
     <div className="App" style={appBgStyle}>
       <Navbar />
-  <Section id="landing" title="HACK BROOKLYN" pos="top-center" titleSize="7vw" textSize="2.2vw">
+      <Section id="landing" title="">
       </Section>
-      <Section
-        id="about"
-        title="ABOUT"
-        pos="center-left"
-        offsetY="-11vw"
-        offsetX="1.25vw"
-        titleSize="7vw"
-        textSize="2.2vw"
-      >
-        <p>About the hackathon...</p>
+      <Section id="about" title="">
       </Section>
-      <Section id="tracks" title="TRACKS" pos="bottom-right" titleSize="7vw" textSize="2.2vw">
-        <p>Tracks information...</p>
+      <Section id="tracks" title="">
       </Section>
-      <Section id="faq" title="FAQ" pos="top-left" titleSize="7vw" textSize="2.2vw">
-        <p>Frequently Asked Questions...</p>
+      <Section id="faq" title="">
       </Section>
-      <Section id="sponsors" title="SPONSORS" pos="bottom-center" titleSize="7vw" textSize="2.2vw">
-        <p>Our sponsors...</p>
+      <Section id="sponsors" title="">
       </Section>
     </div>
   );
