@@ -3,10 +3,11 @@ import './App.css';
 
 function App() {
   const appBgStyle = {
-    backgroundImage: 'url(/images/hero.webp)',
+    backgroundImage: 'url(/images/hero.svg)',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center center',
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
+    backgroundColor: '#000',
     minHeight: '100vh',
     width: '100vw',
   };
