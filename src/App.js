@@ -1,29 +1,18 @@
 
 import './App.css';
-import Navbar from './components/Navbar';
-import Section from './components/Section';
 
 function App() {
   const appBgStyle = {
-    backgroundImage: 'url(/images/main-bg.jpg)',
+    backgroundImage: 'url(/images/hero.webp)',
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'top center',
-    backgroundSize: '100% auto', // scale with viewport width, keep full image width visible
+    backgroundPosition: 'center center',
+    backgroundSize: 'cover',
+    minHeight: '100vh',
+    width: '100vw',
   };
 
   return (
     <div className="App" style={appBgStyle}>
-      <Navbar />
-      <Section id="landing" title="">
-      </Section>
-      <Section id="about" title="">
-      </Section>
-      <Section id="tracks" title="">
-      </Section>
-      <Section id="faq" title="">
-      </Section>
-      <Section id="sponsors" title="">
-      </Section>
     </div>
   );
 }
