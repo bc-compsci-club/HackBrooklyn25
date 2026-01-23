@@ -1,30 +1,15 @@
-body, html, #root, .App {
+* {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  min-height: 100vh;
-  font-family: 'Inter', Arial, sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 .App {
   width: 100vw;
-  min-height: 100vh;
 }
 
-.section {
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
-}
-
-.hero-svg, .hero-image {
+.App img {
   width: 100vw;
   height: auto;
-  min-height: 100vh;
-  object-fit: cover;
+  display: block;
 }
