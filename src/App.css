@@ -8,8 +8,47 @@
   width: 100vw;
 }
 
+.hero-section {
+  position: relative;
+  width: 100vw;
+}
+
 .App img {
   width: 100vw;
   height: auto;
   display: block;
+}
+
+.sponsor-button {
+  position: absolute;
+  bottom: clamp(10px, 3vh, 100px);
+  right: min(10vw, 300px);
+  background: #78BBC4;
+  color: inherit;
+  border: none;
+  padding: clamp(8px, 2vw, 16px) clamp(16px, 4vw, 32px);
+  font-size: clamp(25px, 2.5vw, 50px);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  max-width: calc(100vw - 40px);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.sponsor-button:hover {
+  background: #f7dc6f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(244, 208, 63, 0.4);
+}
+
+.sponsor-email {
+  position: absolute;
+  bottom: -20px;
+  right: min(10vw, 300px);
+  font-size: clamp(20px, 1.5vw, 100px);
+  font-style: italic;
+  text-align: right;
+  z-index: 1000;
+  color: #FFE5BA;
 }
