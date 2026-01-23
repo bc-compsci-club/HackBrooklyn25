@@ -6,11 +6,25 @@ body, html, #root, .App {
   font-family: 'Inter', Arial, sans-serif;
   scroll-behavior: smooth;
   overflow-x: hidden;
+  background-color: #000;
 }
+
 .App {
   width: 100vw;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.hero-image {
+  max-width: 100%;
+  max-height: 100vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 .section {
   scroll-snap-align: start;
 }
