@@ -26,15 +26,12 @@ function App() {
         <div className="social-links">
           <a href="https://www.instagram.com/hackbrooklyn/" target="_blank" rel="noopener noreferrer" className="social-link">
             <i className="fab fa-instagram social-icon"></i>
-            <span className="social-text">Instagram</span>
           </a>
           <a href="https://www.linkedin.com/company/hack-brooklyn/" target="_blank" rel="noopener noreferrer" className="social-link">
             <i className="fab fa-linkedin social-icon"></i>
-            <span className="social-text">LinkedIn</span>
           </a>
           <a href="https://bccs.club/" target="_blank" rel="noopener noreferrer" className="social-link">
             <i className="fas fa-globe social-icon"></i>
-            <span className="social-text">BCCS Club</span>
           </a>
         </div>
       </footer>
