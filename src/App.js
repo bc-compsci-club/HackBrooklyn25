@@ -3,53 +3,45 @@ import React from "react"
 function App() {
   return (
     <div className="w-screen">
-      <div className="sticky top-0 z-[2000]">
-        <nav className="sticky top-0 z-[2000] bg-[#2c3e50] px-[15px] py-2">
-          <div className="mx-auto flex max-w-[1200px] items-center justify-between">
-            <div className="flex items-center gap-1.5">
-              <span className="text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA]">Hack Brooklyn</span>
-            </div>
-            <div className="flex flex-wrap gap-[clamp(15px,3vw,30px)]">
-              <a
-                href="#hero"
-                className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
-              >
-                Home
-              </a>
-              <a
-                href="#about"
-                className="flex items-center rounded-2xl px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
-              >
-                About
-              </a>
-              <a
-                href="#tracks"
-                className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
-              >
-                Tracks
-              </a>
-              <a
-                href="#faq"
-                className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
-              >
-                FAQ
-              </a>
-              <a href="#apply" className="flex items-center rounded-lg bg-[#FFE5BA] px-4 py-2 text-[clamp(15px,1.8vw,19px)] font-semibold text-[#2c3e50] transition-all duration-300 ease-in-out hover:bg-[#ffefcf]" >
-                Apply
-              </a>
-            </div>
+      <nav className="sticky top-0 z-[2000] bg-[#2c3e50] px-[15px] py-2">
+        <div className="mx-auto flex max-w-[1200px] items-center justify-between">
+          <div className="flex items-center gap-1.5">
+            <span className="text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA]">Hack Brooklyn</span>
           </div>
-        </nav>
-        <div className="bg-[#6B4A49] text-center text-[clamp(10px, 2.5vw, 13px)] text-[#ffe5ba]">
-          Fill out our {" "}
-          <a href="https://forms.gle/QzHXVrKNTX9fYJou5"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline hover:text-white transition-colors"
-          >interest form</a>{" "}
-        if you are interested in joining the hackathon!
-      </div>
-    </div>  
+          <div className="flex flex-wrap gap-[clamp(15px,3vw,30px)]">
+            <a
+              href="#hero"
+              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+            >
+              Home
+            </a>
+            <a
+              href="#about"
+              className="flex items-center rounded-2xl px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+            >
+              About
+            </a>
+            <a
+              href="#tracks"
+              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+            >
+              Tracks
+            </a>
+            <a
+              href="#faq"
+              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+            >
+              FAQ
+            </a>
+            <a href="https://forms.gle/QzHXVrKNTX9fYJou5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center rounded-lg bg-[#FFE5BA] px-4 py-2 text-[clamp(15px,1.8vw,19px)] font-semibold text-[#2c3e50] transition-all duration-300 ease-in-out hover:bg-[#ffefcf]" >
+              Interest{"\n"} Form
+            </a>
+          </div>
+        </div>
+      </nav>
       
       <div className="relative w-screen" id="hero">
         <img src="/images/heroo.svg" alt="Hero" className="block h-auto w-screen" />
