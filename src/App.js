@@ -17,18 +17,37 @@ function App() {
             </a>
             <a
               href="#about"
-              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+              className="flex items-center rounded-2xl px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
             >
               About
+            </a>
+            <a
+              href="#tracks"
+              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+            >
+              Tracks
+            </a>
+            <a
+              href="#faq"
+              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+            >
+              FAQ
+            </a>
+            <a href="https://forms.gle/QzHXVrKNTX9fYJou5"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center rounded-lg bg-[#FFE5BA] px-4 py-2 text-[clamp(15px,1.8vw,19px)] font-semibold text-[#2c3e50] transition-all duration-300 ease-in-out hover:bg-[#ffefcf]" >
+              Interest{"\n"} Form
             </a>
           </div>
         </div>
       </nav>
+      
       <div className="relative w-screen" id="hero">
         <img src="/images/heroo.svg" alt="Hero" className="block h-auto w-screen" />
         <a
           href="mailto:bc.cis.club@gmail.com"
-          className="absolute bottom-[clamp(10px,3vh,100px)] right-[min(10vw,300px)] inline-block max-w-[calc(100vw-40px)] bg-[#78BBC4] px-[clamp(16px,4vw,32px)] py-[clamp(8px,2vw,16px)] text-[clamp(25px,2.5vw,50px)] font-semibold text-black no-underline transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:bg-[#f7dc6f] hover:shadow-[0_6px_16px_rgba(244,208,63,0.4)]"
+          className="absolute rounded-2xl bottom-[clamp(10px,3vh,100px)] right-[min(10vw,300px)] inline-block max-w-[calc(100vw-40px)] bg-[#78BBC4] px-[clamp(16px,4vw,32px)] py-[clamp(8px,2vw,16px)] text-[clamp(25px,2.5vw,50px)] font-semibold text-black no-underline transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:bg-[#f7dc6f] hover:shadow-[0_6px_16px_rgba(244,208,63,0.4)]"
         >
           Sponsor Us
         </a>
