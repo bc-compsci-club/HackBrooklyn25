@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="w-screen">
+    <div className="w-full min-h-screen overflow-x-hidden">
       <Navbar/>
       <Hero/>
       <About/>
