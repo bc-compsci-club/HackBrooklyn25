@@ -1,5 +1,3 @@
-import { useEffect, useRef } from 'react';
-
 const ABOUT_BASE_VIEWBOX = { width: 1920, height: 1080 };
 
 function About() {
