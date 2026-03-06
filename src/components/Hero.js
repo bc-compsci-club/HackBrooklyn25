@@ -13,11 +13,11 @@ const HERO_LAYERS = [
     anchor: 'topLeft',
   },
   { key: 'bridge', src: '/images/component_images/bridge.svg', alt: 'Bridge', top: '33%', left: '73%', width: '24%', zIndex: 3 },
-  { key: 'shelf', src: '/images/component_images/shelf.svg', alt: 'Shelf', top: '33%', left: '93%', width: '10%', zIndex: 5 },
-  { key: 'shelf-bottom', src: '/images/component_images/shelf(bottom).svg', alt: 'Shelf bottom', top: '43%', left: '93%', width: '10%', zIndex: 5 },
-  { key: 'basket-stand', src: '/images/component_images/basket_stand.svg', alt: 'Basket stand', top: '40%', left: '90%', width: '8%', zIndex: 6 },
+  { key: 'shelf', src: '/images/component_images/shelf.svg', alt: 'Shelf', top: '45%', left: '45%', width: '38%', zIndex: 5 },
+  { key: 'shelf-bottom', src: '/images/component_images/shelf(bottom).svg', alt: 'Shelf bottom', top: '80%', left: '45%', width: '30%', zIndex: 5 },
+  { key: 'basket-stand', src: '/images/component_images/basket_stand.svg', alt: 'Basket stand', top: '40%', left: '90%', width: '6%', zIndex: 6 },
   { key: 'cat', src: '/images/component_images/cat.svg', alt: 'Cat', top: '54%', left: '80%', width: '6%', zIndex: 6 },
-  { key: 'lamp', src: '/images/component_images/lamp.svg', alt: 'Lamp', top: '38%', left: '38%', width: '18%', zIndex: 4 },
+  { key: 'lamp', src: '/images/component_images/lamp.svg', alt: 'Lamp', top: '55%', left: '38%', width: '22%', zIndex: 4 },
 ];
 
 function Hero() {
@@ -50,6 +50,7 @@ function Hero() {
         className="relative w-full overflow-hidden"
         style={{ aspectRatio: `${HERO_BASE_VIEWBOX.width} / ${HERO_BASE_VIEWBOX.height}` }}
       >
+        {/* Background layers */}
         {HERO_LAYERS.map((layer) => (
           <img
             key={layer.key}
@@ -67,11 +68,11 @@ function Hero() {
           />
         ))}
 
-        {/* HACK BROOKLYN Title - chunky red, two lines */}
+        {/* HACK BROOKLYN Title */}
         <div
           className="absolute select-none pointer-events-none"
           style={{
-            top: '8%',
+            top: '6%',
             left: '3%',
             zIndex: 8,
             fontFamily: '"Arial Black", "Impact", sans-serif',
@@ -87,7 +88,7 @@ function Hero() {
           <div>BROOKLYN</div>
         </div>
 
-        {/* Date: 4.17 - 4.19 */}
+        {/* Date */}
         <div
           className="absolute select-none pointer-events-none"
           style={{
@@ -104,62 +105,78 @@ function Hero() {
           4.17 - 4.19
         </div>
 
-        {/* Countdown Timer */}
-<div
-  className="absolute flex z-10"
-  style={{
-    bottom: '8%',
-    left: '3%',
-    alignItems: 'flex-start',
-    gap: 0,
-  }}
->
-  {[
-    { value: timeLeft.days, label: 'DAYS' },
-    { value: timeLeft.hours, label: 'HOURS' },
-    { value: timeLeft.minutes, label: 'MIN' },
-  ].map((unit, i, arr) => (
-    <div key={unit.label} className="flex items-start">
-      <div className="flex flex-col items-center">
-        <span
+        {/* Timer dark box — bottom left */}
+        <div
+          className="absolute z-10"
           style={{
-            fontSize: 'clamp(36px, 7vw, 120px)',
-            color: '#5a1a1a',
-            fontFamily: 'Georgia, serif',
-            fontWeight: 700,
-            lineHeight: 1,
+            bottom: '0%',
+            left: '0%',
+            width: '38%',
+            backgroundColor: '#5a3520',
+            borderRadius: '0 16px 0 0',
+            padding: 'clamp(16px, 3vw, 48px)',
+            paddingTop: 'clamp(24px, 4vw, 60px)',
+            zIndex: 7,
           }}
         >
-          {String(unit.value).padStart(2, '0')}
-        </span>
-        <span
-          style={{
-            fontSize: 'clamp(9px, 1.2vw, 16px)',
-            color: '#7a3a2a',
-            letterSpacing: '0.15em',
-            marginTop: '4px',
-          }}
-        >
-          {unit.label}
-        </span>
-      </div>
-      {i < arr.length - 1 && (
-        <span
-          style={{
-            fontSize: 'clamp(30px, 6vw, 100px)',
-            color: '#5a1a1a',
-            lineHeight: 1,
-            paddingTop: '0.05em',   // slight nudge down to vertically center with digits
-            marginLeft: 'clamp(4px, 0.8vw, 14px)',
-            marginRight: 'clamp(4px, 0.8vw, 14px)',
-          }}
-        >
-          :
-        </span>
-      )}
-    </div>
-  ))}
-</div>
+          <div className="flex items-start" style={{ gap: 0 }}>
+            {[
+              { value: timeLeft.days, label: 'DAYS' },
+              { value: timeLeft.hours, label: 'HOURS' },
+              { value: timeLeft.minutes, label: 'MIN' },
+            ].map((unit, i, arr) => (
+              <div key={unit.label} className="flex items-start">
+                <div className="flex flex-col items-center">
+                  <span
+                    style={{
+                      fontSize: 'clamp(32px, 6vw, 100px)',
+                      color: '#e8cfa0',
+                      fontFamily: 'Georgia, serif',
+                      fontWeight: 700,
+                      lineHeight: 1,
+                    }}
+                  >
+                    {String(unit.value).padStart(2, '0')}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 'clamp(8px, 1vw, 14px)',
+                      color: '#c8a880',
+                      letterSpacing: '0.15em',
+                      marginTop: '4px',
+                    }}
+                  >
+                    {unit.label}
+                  </span>
+                </div>
+                {i < arr.length - 1 && (
+                  <span
+                    style={{
+                      fontSize: 'clamp(28px, 5vw, 80px)',
+                      color: '#c8a880',
+                      lineHeight: 1,
+                      paddingTop: '0.05em',
+                      marginLeft: 'clamp(4px, 0.8vw, 12px)',
+                      marginRight: 'clamp(4px, 0.8vw, 12px)',
+                    }}
+                  >
+                    :
+                  </span>
+                )}
+              </div>
+            ))}
+          </div>
+          <div
+            style={{
+              fontSize: 'clamp(10px, 1.4vw, 20px)',
+              color: '#c8a880',
+              letterSpacing: '0.3em',
+              marginTop: 'clamp(8px, 1.5vw, 20px)',
+            }}
+          >
+            UNTIL HACKBC
+          </div>
+        </div>
       </div>
     </div>
   );
