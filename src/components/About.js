@@ -30,9 +30,9 @@ function About() {
           alt="Carpet"
           className="absolute select-none pointer-events-none"
           style={{
-            bottom: '0%',
-            left: '-2%',
-            width: '75%',
+            bottom: '80%',
+            left: '55%',
+            width: '40%',
             height: 'auto',
             zIndex: 1,
           }}

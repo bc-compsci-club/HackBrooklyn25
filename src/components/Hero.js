@@ -13,11 +13,11 @@ const HERO_LAYERS = [
     anchor: 'topLeft',
   },
   { key: 'bridge', src: '/images/component_images/bridge.svg', alt: 'Bridge', top: '33%', left: '73%', width: '24%', zIndex: 3 },
-  { key: 'shelf', src: '/images/component_images/shelf.svg', alt: 'Shelf', top: '45%', left: '45%', width: '38%', zIndex: 5 },
-  { key: 'shelf-bottom', src: '/images/component_images/shelf(bottom).svg', alt: 'Shelf bottom', top: '80%', left: '45%', width: '30%', zIndex: 5 },
+  { key: 'shelf', src: '/images/component_images/shelf.svg', alt: 'Shelf', top: '45%', left: '45%', width: '50%', zIndex: 5 },
+  { key: 'shelf-bottom', src: '/images/component_images/shelf(bottom).svg', alt: 'Shelf bottom', top: '91%', left: '42.4%', width: '45%', zIndex: 5 },
   { key: 'basket-stand', src: '/images/component_images/basket_stand.svg', alt: 'Basket stand', top: '40%', left: '90%', width: '6%', zIndex: 6 },
   { key: 'cat', src: '/images/component_images/cat.svg', alt: 'Cat', top: '54%', left: '80%', width: '6%', zIndex: 6 },
-  { key: 'lamp', src: '/images/component_images/lamp.svg', alt: 'Lamp', top: '55%', left: '38%', width: '22%', zIndex: 4 },
+  { key: 'lamp', src: '/images/component_images/lamp.svg', alt: 'Lamp', top: '59%', left: '38%', width: '22%', zIndex: 6 },
 ];
 
 function Hero() {
@@ -92,7 +92,7 @@ function Hero() {
         <div
           className="absolute select-none pointer-events-none"
           style={{
-            top: '44%',
+            top: '40%',
             left: '3%',
             zIndex: 8,
             fontFamily: '"Arial Black", "Impact", sans-serif',
@@ -105,21 +105,18 @@ function Hero() {
           4.17 - 4.19
         </div>
 
-        {/* Timer dark box — bottom left */}
+        {}
         <div
           className="absolute z-10"
           style={{
-            bottom: '0%',
-            left: '0%',
-            width: '38%',
-            backgroundColor: '#5a3520',
-            borderRadius: '0 16px 0 0',
-            padding: 'clamp(16px, 3vw, 48px)',
-            paddingTop: 'clamp(24px, 4vw, 60px)',
+            top: '60%',
+            left: '23%',
+            width: '32%',
+            textAlign: 'center',
             zIndex: 7,
           }}
         >
-          <div className="flex items-start" style={{ gap: 0 }}>
+          <div className="flex items-start justify-center" style={{ gap: 0 }}>
             {[
               { value: timeLeft.days, label: 'DAYS' },
               { value: timeLeft.hours, label: 'HOURS' },
