@@ -63,7 +63,7 @@ function Tracks() {
   return (
     <section id="tracks" className="relative w-full min-h-[120vw] transition-[min-height] duration-300 ease-out md:min-h-0">
       {/* Subway Stops Line */}
-    <div className="absolute left-1/2 top-[36%] -translate-x-1/2 -translate-y-1/2 z-10 h-[clamp(3rem,10vw,4.5rem)] w-[min(60vw,360px)] px-[clamp(0.25rem,2vw,0.5rem)]">
+    <div className="absolute left-1/2 top-[40%] -translate-x-1/2 -translate-y-1/2 z-10 h-[clamp(3rem,10vw,4.5rem)] w-[min(60vw,360px)] px-[clamp(0.25rem,2vw,0.5rem)]">
         <div
           className="absolute left-0 right-0 top-1/2 h-[clamp(12px,1.2vw,30px)] -translate-y-1/2 rounded-full -translate-y-1/2 bg-[#edc001]"
           aria-hidden
@@ -82,7 +82,7 @@ function Tracks() {
                 }`}
               >
                 {/* Track Labels */}
-                <span className="absolute bottom-[90%] left-1/2 mb-1 -translate-x-1/2 -rotate-45 whitespace-nowrap text-[clamp(11px,1.2vw,12px)] font-medium text-black">
+                <span className="absolute bottom-[90%] left-1/2 mb-1 -translate-x-1/2 -rotate-45 whitespace-nowrap text-[clamp(12px,1.2vw,16px)] font-medium text-black">
                   {label}
                 </span>
                 {/* Station Stops (circles) */}
@@ -159,7 +159,7 @@ function Tracks() {
         </div>
 
         {/* Bulletin Board */}
-        <div className="absolute top-[75%] left-[10%] flex h-[40%] w-[40%] -translate-y-1/2 items-center justify-center">
+        <div className="absolute top-[75%] right-[10%] flex h-[40%] w-[40%] -translate-y-1/2 items-center justify-center">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.img
               src="/images/bulletin_board_placeholder.png"
