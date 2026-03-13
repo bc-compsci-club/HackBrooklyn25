@@ -1,4 +1,4 @@
-import { useState, useEffect, act } from "react";
+import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const STOPS = ["FINANCE", "EDUCATION", "GAMING", "HARDWARE"];
@@ -23,10 +23,20 @@ function Tracks() {
 
   const handleStopClick = (label) => {
     const newIndex = STOPS.indexOf(label);
+
+    if (currentStopIndex === newIndex) {
+      // Deselect: train moves left, sign/bulletin show TRACKS
+      setActiveStop(null);
+      setCurrentStopIndex(null);
+      setDirection(-1);
+      setIsShaking(true);
+      return;
+    }
+
     setActiveStop(label);
-    
+
     if (currentStopIndex === null) {
-      // First selection - move right
+      // First selection – move right
       setDirection(1);
       setCurrentStopIndex(newIndex);
       setIsShaking(true);
@@ -101,7 +111,7 @@ function Tracks() {
         src="/images/train_platform.svg"
         alt=""
         aria-hidden
-        className="hidden block h-auto w-full md:block"
+        className="hidden h-auto w-full md:block"
       />
 
       <div className="absolute inset-0">
@@ -109,7 +119,7 @@ function Tracks() {
         <div className="absolute left-1/2 top-[13.7%] flex h-[18%] w-[78%] -translate-x-1/2 -translate-y-1/2 items-center justify-center md:top-[16%]">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.div
-              key={activeStop}
+              key={activeStop ?? "TRACKS"}
               className="relative h-full w-full"
               custom={direction}
               variants={variants}
@@ -154,7 +164,7 @@ function Tracks() {
             <motion.img
               src="/images/bulletin_board_placeholder.png"
               alt="Bulletin Board"
-              key={activeStop}
+              key={activeStop ?? "TRACKS"}
               custom={direction}
               variants={variants}
               initial="enter"
