@@ -1,11 +1,8 @@
-import React from "react"
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Footer from "./components/Footer";
-import Tracks from "./components/Tracks";
-import Speakers from "./components/Speakers";
-import Prizes from "./components/Prizes";
+// import Tracks from "./components/Tracks";
 
 function App() {
   return (
@@ -13,9 +10,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <About/>
-      <Tracks/>
-      <Speakers/>
-      <Prizes/>
+      {/* <Tracks/> */}
       <Footer/>
     </div>
   );
