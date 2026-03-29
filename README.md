@@ -1,70 +1,100 @@
-# Getting Started with Create React App
+# Hack Brooklyn 2026
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The official website for **Hack Brooklyn** — Brooklyn College's 48-hour hackathon. Built with React and Tailwind CSS, the site features a live countdown timer, interactive track selector, prize showcase, mentor carousel, and FAQ section.
 
-## Available Scripts
+**Event date:** April 17, 2026 at 9:00 AM (48 hours, in-person during the day / remote at night)
 
-In the project directory, you can run:
+## Tech Stack
 
-### `npm start`
+- **React 19** via Create React App
+- **Tailwind CSS 3** for styling
+- **Framer Motion** for animations
+- **Font Awesome** for icons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js 18+ and npm
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+```bash
+git clone https://github.com/bc-compsci-club/HackBrooklyn25.git
+cd HackBrooklyn25
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running Locally
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Opens at [http://localhost:3000](http://localhost:3000) with hot reload.
 
-### `npm run eject`
+### Building for Production
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Output goes to the `build/` folder.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Running Tests
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm test
+```
 
-## Learn More
+## Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+src/
+  components/
+    Navbar.js       # Sticky nav with mobile hamburger menu
+    Hero.js         # Full-screen banner with countdown timer
+    About.js        # Event overview and details
+    Tracks.js       # Interactive subway-themed track carousel
+    Prizes.js       # Tabbed prize showcase ($13K+ in prizes)
+    Speakers.js     # Auto-scrolling mentor carousel
+    FAQ.js          # Collapsible FAQ section
+    Footer.js       # Social links and footer
+  App.js            # Root component
+  index.css         # Global styles and Tailwind imports
+public/
+  images/           # SVG graphics and speaker photos
+  fonts/            # Custom SpenbebGame display font
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Hackathon Tracks
 
-### Code Splitting
+- Finance
+- Education
+- Entertainment
+- Healthcare
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contributing
 
-### Analyzing the Bundle Size
+1. **Fork** the repository and create a branch from `main`:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. **Make your changes.** Keep each PR focused on a single concern.
 
-### Making a Progressive Web App
+3. **Test locally** with `npm start` before opening a PR.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. **Open a pull request** against `main` with a clear description of what changed and why.
 
-### Advanced Configuration
+### Guidelines
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Follow the existing code style (ESLint with `react-app` preset).
+- Use Tailwind utility classes rather than adding custom CSS where possible.
+- Keep components in `src/components/` and assets in `public/images/`.
+- Use descriptive branch names: `feature/`, `fix/`, `chore/`.
+- Add screenshots or screen recordings to PRs that change the UI.
 
-### Deployment
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is maintained by the [Brooklyn College Computer Science Club](https://bccompsci.club).
