@@ -9,7 +9,6 @@ function About(){
           src="/images/about(no text).svg"
           alt="About"
           className="block h-auto w-full"
-          loading="eager"
           onLoad={() => setLoaded(true)}
         />
         {/* Header in the title area (upper portion) */}
@@ -28,10 +27,10 @@ function About(){
         </div>
         {/* Description in the red carpet area (lower portion) */}
         <div
-          className={`absolute bottom-[10%] md:bottom-[30%] w-[80%] px-10 max-w-md md:max-w-none  transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+          className={`absolute top-[45%] sm:top-[48%] md:top-[50%] xl:top-[60%] w-[80%] px-5 max-w-md md:max-w-none transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
         >
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl md:line-clamp-4"
+            className="text-xs md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl md:line-clamp-4"
             style={{
               color: "#FFE5BA",
               fontFamily:
