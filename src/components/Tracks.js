@@ -3,6 +3,13 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const STOPS = ["FINANCE", "EDUCATION", "ENTERTAINMENT", "HEALTHCARE"];
 
+const STOP_IMAGES = {
+  FINANCE: "/images/finance.svg",
+  EDUCATION: "/images/education.svg",
+  ENTERTAINMENT: "/images/entertainment.svg",
+  HEALTHCARE: "/images/healthcare.svg",
+};
+
 const variants = {
   enter: (direction) => ({
     x: direction > 0 ? 1000 : -1000
@@ -16,8 +23,8 @@ const variants = {
 };
 
 function Tracks() {
-  const [activeStop, setActiveStop] = useState(null);
-  const [currentStopIndex, setCurrentStopIndex] = useState(null);
+  const [activeStop, setActiveStop] = useState("FINANCE");
+  const [currentStopIndex, setCurrentStopIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isShaking, setIsShaking] = useState(false);
 
@@ -82,7 +89,7 @@ function Tracks() {
                 }`}
               >
                 {/* Track Labels */}
-                <span className="absolute bottom-[90%] left-1/2 mb-1 -translate-x-1/2 -rotate-45 whitespace-nowrap text-[clamp(12px,1.2vw,16px)] font-medium text-black">
+                <span className={`absolute bottom-[90%] left-1/2 mb-1 -translate-x-1/2 -rotate-45 whitespace-nowrap text-[clamp(12px,1.2vw,16px)] text-black ${activeStop === label ? "font-bold" : "font-medium"}`}>
                   {label}
                 </span>
                 {/* Station Stops (circles) */}
@@ -189,11 +196,11 @@ function Tracks() {
         </div>
 
         {/* Bulletin Board */}
-        <div className="absolute top-[40%] right-[-5%] flex h-[60%] w-[60%] items-center justify-center">
+        <div className="absolute top-[40%] right-[30%] md:right-[-5%] flex h-[60%] w-[45%] md:w-[60%] items-center justify-center pointer-events-none">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.img
-              src="/images/education.svg"
-              alt="Education Content"
+              src={activeStop ? STOP_IMAGES[activeStop] : "/images/education.svg"}
+              alt={activeStop ? `${activeStop} Content` : "Default Content"}
               key={activeStop ?? "TRACKS"}
               custom={direction}
               variants={variants}
