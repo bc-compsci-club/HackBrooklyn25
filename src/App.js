@@ -6,6 +6,7 @@ import Tracks from "./components/Tracks";
 import Speakers from "./components/Speakers";
 import Prizes from "./components/Prizes";
 import FAQ from "./components/FAQ";
+import Sponsors from "./components/Sponsors";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Speakers/>
       <Prizes/>
       <FAQ/>
+      <Sponsors/>
       <Footer/>
     </div>
   );
