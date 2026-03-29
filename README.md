@@ -95,4 +95,4 @@ public/
 
 ## License
 
-This project is maintained by the [Brooklyn College Computer Science Club](https://bccompsci.club).
+This project is maintained by the [Brooklyn College Computer Science Club](https://bccs.club).
