@@ -4,6 +4,8 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Tracks from "./components/Tracks";
+import Speakers from "./components/Speakers";
+import Prizes from "./components/Prizes";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Hero/>
       <About/>
       <Tracks/>
+      <Speakers/>
+      <Prizes/>
       <Footer/>
     </div>
   );
