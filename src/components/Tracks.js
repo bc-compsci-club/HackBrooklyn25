@@ -140,8 +140,8 @@ function Tracks() {
                 alt="Track sign"
                 className="h-full w-full object-contain object-center"
               />
-              <span className="absolute left-1/2 top-[52%] flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[clamp(24px,4vw,70px)] font-bold font-spenbebgame text-white drop-shadow-sm">
-                {currentStopIndex !== null ? STOPS[currentStopIndex] : "TRACKS"}
+              <span className="absolute left-1/2 top-[52%] flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[clamp(20px,4vw,70px)] font-bold font-spenbebgame text-white drop-shadow-sm">
+                TRACKS
               </span>
             </motion.div>
           </AnimatePresence>
