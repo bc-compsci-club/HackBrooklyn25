@@ -4,10 +4,10 @@ import { AnimatePresence, motion } from "framer-motion";
 const STOPS = ["FINANCE", "EDUCATION", "ENTERTAINMENT", "HEALTHCARE"];
 
 const STOP_IMAGES = {
-  FINANCE: "/images/finance.svg",
-  EDUCATION: "/images/education.svg",
-  ENTERTAINMENT: "/images/entertainment.svg",
-  HEALTHCARE: "/images/healthcare.svg",
+  FINANCE: "/images/financee.svg",
+  EDUCATION: "/images/educationn.svg",
+  ENTERTAINMENT: "/images/entertainmentt.svg",
+  HEALTHCARE: "/images/healthcaree.svg",
 };
 
 const variants = {
