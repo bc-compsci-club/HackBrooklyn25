@@ -2,8 +2,6 @@
 
 The official website for **Hack Brooklyn** — Brooklyn College's 48-hour hackathon. Built with React and Tailwind CSS, the site features a live countdown timer, interactive track selector, prize showcase, mentor carousel, and FAQ section.
 
-**Event date:** April 17, 2026 at 9:00 AM (48 hours, in-person during the day / remote at night)
-
 ## Tech Stack
 
 - **React 19** via Create React App
