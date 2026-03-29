@@ -8,7 +8,7 @@ function About(){
         <img
           src="/images/about(no text).svg"
           alt="About"
-          className="block h-auto w-full"
+          className="block h-full w-full"
           loading="eager"
           onLoad={() => setLoaded(true)}
         />
@@ -28,10 +28,10 @@ function About(){
         </div>
         {/* Description in the red carpet area (lower portion) */}
         <div
-          className={`absolute bottom-[10%] md:bottom-[30%] w-[80%] px-10 max-w-md md:max-w-none  transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+          className={`absolute h-full top-[42%] md:bottom-[30%] w-[80%] px-5 max-w-md md:max-w-none  transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
         >
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl md:line-clamp-4"
+            className="text-xs md:text-lg lg:text-xl md:line-clamp-4"
             style={{
               color: "#FFE5BA",
               fontFamily:
