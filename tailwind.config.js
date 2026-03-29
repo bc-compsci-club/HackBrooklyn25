@@ -5,6 +5,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
+        sans: [
+          "SF Pro Text",
+          "SF Pro Display",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        sfpro: ["SF Pro Text", "SF Pro Display", "-apple-system", "sans-serif"],
         spenbebgame: ["Spenbeb Game", "san-serif"],
       },
 

@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const STOPS = ["FINANCE", "EDUCATION", "GAMING", "HARDWARE"];
+const STOPS = ["FINANCE", "EDUCATION", "ENTERTAINMENT", "HEALTHCARE"];
+
+const STOP_IMAGES = {
+  FINANCE: "/images/finance.svg",
+  EDUCATION: "/images/education.svg",
+  ENTERTAINMENT: "/images/entertainment.svg",
+  HEALTHCARE: "/images/healthcare.svg",
+};
 
 const variants = {
   enter: (direction) => ({
@@ -16,8 +23,8 @@ const variants = {
 };
 
 function Tracks() {
-  const [activeStop, setActiveStop] = useState(null);
-  const [currentStopIndex, setCurrentStopIndex] = useState(null);
+  const [activeStop, setActiveStop] = useState("FINANCE");
+  const [currentStopIndex, setCurrentStopIndex] = useState(0);
   const [direction, setDirection] = useState(0);
   const [isShaking, setIsShaking] = useState(false);
 
@@ -82,7 +89,7 @@ function Tracks() {
                 }`}
               >
                 {/* Track Labels */}
-                <span className="absolute bottom-[90%] left-1/2 mb-1 -translate-x-1/2 -rotate-45 whitespace-nowrap text-[clamp(12px,1.2vw,16px)] font-medium text-black">
+                <span className={`absolute bottom-[90%] left-1/2 mb-1 -translate-x-1/2 -rotate-45 whitespace-nowrap text-[clamp(12px,1.2vw,16px)] text-black ${activeStop === label ? "font-bold" : "font-medium"}`}>
                   {label}
                 </span>
                 {/* Station Stops (circles) */}
@@ -133,8 +140,8 @@ function Tracks() {
                 alt="Track sign"
                 className="h-full w-full object-contain object-center"
               />
-              <span className="absolute left-1/2 top-[52%] flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[clamp(32px,6vw,120px)] font-bold font-spenbebgame text-white drop-shadow-sm">
-                {currentStopIndex !== null ? STOPS[currentStopIndex] : "TRACKS"}
+              <span className="absolute left-1/2 top-[52%] flex w-full -translate-x-1/2 -translate-y-1/2 justify-center text-center text-[clamp(20px,4vw,70px)] font-bold font-spenbebgame text-white drop-shadow-sm">
+                TRACKS
               </span>
             </motion.div>
           </AnimatePresence>
@@ -142,6 +149,21 @@ function Tracks() {
 
         {/* Train */}
         <div className="absolute bottom-[-5%] left-1/2 flex h-[52%] w-[92%] -translate-x-1/2 translate-y-0 items-end justify-center md:bottom-[5%]">
+          {/* Left Arrow */}
+          <button
+            type="button"
+            onClick={() => {
+              const nextIndex = currentStopIndex === null ? 0 : currentStopIndex - 1;
+              if (nextIndex >= 0) {
+                handleStopClick(STOPS[nextIndex]);
+              }
+            }}
+            aria-label="Previous stop"
+            className="absolute left-[5%] top-1/2 -translate-y-1/2 text-[clamp(40px,8vw,80px)] text-black hover:text-gray-700 transition-colors duration-300 select-none cursor-pointer bg-transparent border-none p-0 z-50"
+          >
+            ←
+          </button>
+
           <motion.img
             src="/images/train.svg"
             alt="Train"
@@ -156,14 +178,29 @@ function Tracks() {
             
             className="h-full w-full object-contain object-center"
           />
+
+          {/* Right Arrow */}
+          <button
+            type="button"
+            onClick={() => {
+              const nextIndex = currentStopIndex === null ? 0 : currentStopIndex + 1;
+              if (nextIndex < STOPS.length) {
+                handleStopClick(STOPS[nextIndex]);
+              }
+            }}
+            aria-label="Next stop"
+            className="absolute right-[5%] top-1/2 -translate-y-1/2 text-[clamp(40px,8vw,80px)] text-black hover:text-gray-700 transition-colors duration-300 select-none cursor-pointer bg-transparent border-none p-0 z-50"
+          >
+            →
+          </button>
         </div>
 
         {/* Bulletin Board */}
-        <div className="absolute top-[75%] right-[10%] flex h-[40%] w-[40%] -translate-y-1/2 items-center justify-center">
+        <div className="absolute top-[40%] right-[30%] md:right-[-5%] flex h-[60%] w-[45%] md:w-[60%] items-center justify-center pointer-events-none">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.img
-              src="/images/bulletin_board_placeholder.png"
-              alt="Bulletin Board"
+              src={activeStop ? STOP_IMAGES[activeStop] : "/images/education.svg"}
+              alt={activeStop ? `${activeStop} Content` : "Default Content"}
               key={activeStop ?? "TRACKS"}
               custom={direction}
               variants={variants}
