@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Tracks from "./components/Tracks";
 import Speakers from "./components/Speakers";
 import Prizes from "./components/Prizes";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Tracks/>
       <Speakers/>
       <Prizes/>
+      <FAQ/>
       <Footer/>
     </div>
   );

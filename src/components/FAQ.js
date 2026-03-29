@@ -6,39 +6,31 @@ const FAQ_DATA = [
     items: [
       {
         q: "What is a hackathon?",
-        a: "Place holder text for now.",
+        a: "A hackathon is a weekend-long event where students come together to build creative software or hardware projects. It's a great opportunity to learn new skills, meet other passionate people, and bring your ideas to life!",
       },
       {
         q: "When is Hack Brooklyn?",
-        a: "Place holder text for now.",
+        a: "Hack Brooklyn will take place from April 17th to 19th, 2026. Check our social media and website for the exact dates and schedule.",
       },
       {
         q: "What's the cost?",
-        a: "Place holder text for now.",
+        a: "Hack Brooklyn is completely free to attend! We provide food, swag, and a great experience at no cost to participants.",
       },
       {
         q: "What can I win?",
-        a: "Place holder text for now.",
+        a: "We have over $13K+ worth of prizes including tech gear like a Logitech Superlight 2 Mouse, Keychron V1 Max Keyboard, Acer Nitro Monitor, and more! There are also sponsor prizes from ElevenLabs and Prenora Dynamics.",
       },
       {
         q: "But I never hacked before!",
-        a: "Place holder text for now.",
+        a: "That's totally fine! Hack Brooklyn welcomes beginners of all skill levels. We'll have mentors, workshops, and resources to help you learn and build something awesome — no prior hackathon experience needed.",
       },
       {
         q: "I can't wait until the weekend to get started with Hack Brooklyn!",
-        a: "Place holder text for now.",
-      },
-      {
-        q: "Is there an Admissions Puzzle this year?",
-        a: "Place holder text for now.",
-      },
-      {
-        q: "Where can I find the Admissions Puzzle?",
-        a: "Place holder text for now.",
+        a: "We love the enthusiasm! Follow us on social media and join our Discord to stay updated on pre-hackathon events, workshops, and team formation opportunities.",
       },
       {
         q: "Still have questions!",
-        a: "Place holder text for now.",
+        a: "No worries! Reach out to us on Discord or email us at bc.cis.club@gmail.com and we'll be happy to help.",
       },
     ],
   },
@@ -47,27 +39,27 @@ const FAQ_DATA = [
     items: [
       {
         q: "Can I apply?",
-        a: "Place holder text for now.",
+        a: "Hack Brooklyn is open to all currently enrolled college and university students. Whether you're a freshman or a grad student, you're welcome to apply!",
       },
       {
         q: "What if I'm no longer eligible? / Can I volunteer to be a judge or mentor?",
-        a: "Place holder text for now.",
+        a: "Absolutely! We're always looking for experienced mentors and judges. If you're a professional or alumni, you can apply to volunteer through our mentor application form.",
       },
       {
         q: "How do I apply?",
-        a: "Place holder text for now.",
+        a: "Head to our registration page and fill out the application form. You'll hear back from us with a decision before the event. Deadline is April 10th, 2026",
       },
       {
         q: "How do teams work?",
-        a: "Place holder text for now.",
+        a: "Teams can have up to 4 members. You can form a team before the event or find teammates at our team formation session during the hackathon. You can also participate solo!",
       },
       {
         q: "What if I go to Brooklyn College (or a CUNY school)?",
-        a: "Place holder text for now.",
+        a: "Brooklyn College and CUNY students are especially welcome! Hack Brooklyn is organized by the Brooklyn College Computer Science Club, so you're right at home.",
       },
       {
         q: "Where can I find the application to be a mentor or a judge?",
-        a: "Place holder text for now.",
+        a: "The mentor and judge application is available on our website. Check the registration page or reach out to us on Discord for the direct link.",
       },
     ],
   },
@@ -76,11 +68,27 @@ const FAQ_DATA = [
     items: [
       {
         q: "What are hackathon tracks?",
-        a: "Place holder text for now.",
+        a: "Tracks are themed categories for your project. This year's tracks are Finance, Education, Entertainment, and Healthcare. Choose the one that inspires you most and build your project around it!",
+      },
+      {
+        q: "How many main tracks can I choose?",
+        a: "You can select one or two main tracks for your project. Pick the tracks that best align with your idea!",
+      },
+      {
+        q: "What are sponsored tracks?",
+        a: "Sponsored tracks are special challenge categories provided by our sponsors, such as Best ElevenLabs Hack and Best Prenora Dynamics Hack. They come with their own unique prizes!",
+      },
+      {
+        q: "How many sponsored tracks can I apply to?",
+        a: "There's no limit! You can apply to as many sponsored tracks as you'd like. If your project fits multiple sponsored challenges, go for it!",
+      },
+      {
+        q: "Can I combine main tracks and sponsored tracks?",
+        a: "Absolutely! You can choose one or two main tracks and apply to unlimited sponsored tracks at the same time.",
       },
       {
         q: "Do I have to submit a project if I attend?",
-        a: "Place holder text for now.",
+        a: "Submitting a project is encouraged but not required. You're welcome to attend workshops, network with others, and enjoy the event even if you don't submit a final project.",
       },
     ],
   },
@@ -89,27 +97,27 @@ const FAQ_DATA = [
     items: [
       {
         q: "Can I attend Hack Brooklyn virtually?",
-        a: "Place holder text for now.",
+        a: "Hack Brooklyn is an in-person event. We encourage all participants to attend on-site for the full experience, including networking, mentorship, and team collaboration.",
       },
       {
         q: "Will food be provided?",
-        a: "Place holder text for now.",
+        a: "Yes! We'll provide meals and snacks throughout the event to keep you fueled while you hack. We'll do our best to accommodate dietary restrictions.",
       },
       {
         q: "Will there be overnight accommodations?",
-        a: "Place holder text for now.",
+        a: "No, this event will not be overnight. The building closes at 7 pm and hackers are required to leave for the night.",
       },
       {
         q: "Where is Hack Brooklyn?",
-        a: "Place holder text for now.",
+        a: "Hack Brooklyn is held at Brooklyn College. The exact building and room details will be shared with accepted participants before the event.",
       },
       {
         q: "Will my travel be reimbursed?",
-        a: "Place holder text for now.",
+        a: "Unfortunately, we are unable to offer travel reimbursements at this time. However, Brooklyn College is easily accessible by public transit.",
       },
       {
         q: "Will there be hardware I can use?",
-        a: "Place holder text for now.",
+        a: "We'll have a limited selection of hardware available for participants to borrow during the event. Bring your own laptop and any other equipment you might need.",
       },
     ],
   },
@@ -195,7 +203,7 @@ function FAQ() {
               key={block.category}
               className="rounded-lg border border-[#9D7E67] bg-[#936656]/30 p-3 md:p-4"
             >
-              <h3 className="mb-2 border-b border-[#8b6f47] pb-1.5 text-[clamp(16px,2vw,19px)] font-semibold text-[#5A2C22]">
+              <h3 className="mb-2 border-b border-[#8b6f47] pb-1.5 text-[clamp(16px,2vw,19px)] font-semibold text-[#2a0f0a]">
                 {block.category}
               </h3>
               <div className="max-h-[min(38vh,280px)] overflow-y-auto pr-1 md:max-h-[min(42vh,320px)]">
