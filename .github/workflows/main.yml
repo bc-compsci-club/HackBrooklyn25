@@ -1,0 +1,22 @@
+name: Deploy-netify-dev
+
+on: 
+  push:
+    branches: [dev]
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: “Build dev site”
+        run: curl -X POST -d {} ${{ secrets.NET_BUILD }}
+        
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "deploy"
+        run: curl -X POST -d {} ${{ secrets.NET_BUILD }}
+      
