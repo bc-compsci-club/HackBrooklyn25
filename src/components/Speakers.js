@@ -43,6 +43,18 @@ const SPEAKERS = [
     company: "Capital One",
     image: "/images/speakers/Shahidullah.jpeg",
   },
+  {
+    name: "Robert Cavallito",
+    title: "Angel Investor, Founder",
+    company: "Masthead Venture",
+    image: "/images/speakers/robert-cavallito.jpeg",
+  },
+  {
+    name: "Abhijit Chanda",
+    title: "Director of AI & Data Analytics",
+    company: "Tredence",
+    image: "/images/speakers/abhijit-chanda.jpeg",
+  },
 ];
 
 function Speakers() {
