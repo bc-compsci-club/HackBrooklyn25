@@ -6,6 +6,9 @@ import Tracks from "./components/Tracks";
 import Speakers from "./components/Speakers";
 import Prizes from "./components/Prizes";
 import FAQ from "./components/FAQ";
+import Speakers from "./components/Speakers";
+import Prizes from "./components/Prizes";
+import FAQ from "./components/FAQ";
 import Sponsors from "./components/Sponsors";
 
 function App() {
@@ -19,6 +22,9 @@ function App() {
       <Prizes/>
       <FAQ/>
       <Sponsors/>
+      <Speakers/>
+      <Prizes/>
+      <FAQ/>
       <Footer/>
     </div>
   );
