@@ -196,7 +196,7 @@ function Tracks() {
         </div>
 
         {/* Bulletin Board */}
-        <div className="absolute top-[40%] right-[30%] md:right-[-5%] flex h-[60%] w-[45%] md:w-[60%] items-center justify-center pointer-events-none">
+        <div className="absolute top-[45%] bottom-0 left-1/2 -translate-x-1/2 flex w-[45%] md:w-[60%] items-center justify-center pointer-events-none">
           <AnimatePresence mode="wait" custom={direction}>
             <motion.img
               src={activeStop ? STOP_IMAGES[activeStop] : "/images/education.svg"}
