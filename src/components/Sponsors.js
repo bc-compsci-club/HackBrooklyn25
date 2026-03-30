@@ -39,6 +39,13 @@ function Sponsors() {
             className="h-[clamp(70px,16vw,150px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
+        <a href="https://www.redbull.com/us-en" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/redbull-logo-png-transparent.png"
+            alt="Red Bull"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         </div>
       </div>
     </section>
