@@ -37,6 +37,18 @@ const PRIZE_DATA = [
       "Engineering Internship Interview at Prenora Dynamics",
     ],
   },
+  {
+    place: "TunerBench Challenge",
+    items: [
+      "AI Tracking WebCam",
+    ],
+  },
+  {
+    place: "Girls Who Code Challenge",
+    items: [
+      "Flower Lego Building Set",
+    ],
+  },
 ];
 
 function Prizes() {
