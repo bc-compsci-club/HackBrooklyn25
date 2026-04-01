@@ -60,30 +60,62 @@ const SPEAKERS = [
 function Speakers() {
   const trackRef = useRef(null);
   const [isPaused, setIsPaused] = useState(false);
+  const isPausedRef = useRef(false);
+  const positionRef = useRef(0);
+  const isDragging = useRef(false);
+  const dragStartX = useRef(0);
+  const dragStartPos = useRef(0);
+
+  useEffect(() => {
+    isPausedRef.current = isPaused;
+  }, [isPaused]);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
 
     let animationId;
-    let position = 0;
     const speed = 0.5;
 
     const animate = () => {
-      if (!isPaused) {
-        position -= speed;
+      if (!isPausedRef.current && !isDragging.current) {
+        positionRef.current -= speed;
         const halfWidth = track.scrollWidth / 2;
-        if (Math.abs(position) >= halfWidth) {
-          position = 0;
+        if (Math.abs(positionRef.current) >= halfWidth) {
+          positionRef.current = 0;
         }
-        track.style.transform = `translateX(${position}px)`;
+        track.style.transform = `translateX(${positionRef.current}px)`;
       }
       animationId = requestAnimationFrame(animate);
     };
 
     animationId = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationId);
-  }, [isPaused]);
+  }, []);
+
+  const handleMouseDown = (e) => {
+    isDragging.current = true;
+    dragStartX.current = e.clientX;
+    dragStartPos.current = positionRef.current;
+    setIsPaused(true);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDragging.current) return;
+    const delta = e.clientX - dragStartX.current;
+    const track = trackRef.current;
+    positionRef.current = dragStartPos.current + delta;
+    const halfWidth = track.scrollWidth / 2;
+    if (Math.abs(positionRef.current) >= halfWidth) {
+      positionRef.current = 0;
+    }
+    track.style.transform = `translateX(${positionRef.current}px)`;
+  };
+
+  const handleMouseUp = () => {
+    isDragging.current = false;
+    setIsPaused(false);
+  };
 
   // Duplicate speakers for seamless loop
   const allSpeakers = [...SPEAKERS, ...SPEAKERS];
@@ -95,11 +127,14 @@ function Speakers() {
       </h2>
 
       <div
-        className="relative w-full"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
+        className="relative w-full cursor-grab active:cursor-grabbing select-none"
+        onMouseEnter={() => { if (!isDragging.current) setIsPaused(true); }}
+        onMouseLeave={() => { isDragging.current = false; setIsPaused(false); }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
       >
-        <div ref={trackRef} className="flex w-max gap-8 px-4">
+        <div ref={trackRef} className="flex w-max gap-8 px-4 pointer-events-none">
           {allSpeakers.map((speaker, i) => (
             <div
               key={i}
