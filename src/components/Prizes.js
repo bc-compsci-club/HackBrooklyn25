@@ -3,6 +3,7 @@ import { useState } from "react";
 const PRIZE_DATA = [
   {
     place: "1st Place",
+    description: "Best Overall Hack",
     items: [
       "Logitech Superlight 2 Mouse",
       "Keychron V1 Max Keyboard",
@@ -12,6 +13,7 @@ const PRIZE_DATA = [
   },
   {
     place: "2nd Place",
+    description: "Second Best Overall Hack",
     items: [
       "Acer Nitro Monitor",
       "Featherless credits worth $150",
@@ -19,6 +21,7 @@ const PRIZE_DATA = [
   },
   {
     place: "3rd Place",
+    description: "Third Best Overall Hack",
     items: [
       "Lego Gameboy",
       "Featherless credits worth $75",
@@ -26,12 +29,14 @@ const PRIZE_DATA = [
   },
   {
     place: "Best ElevenLabs Hack",
+    description: "Build a project that creatively integrates ElevenLabs' voice AI or audio APIs.",
     items: [
       "6 months of ElevenLabs Scale tier ($1980 value/team member)",
     ],
   },
   {
     place: "Best Prenora Dynamics Hack",
+    description: "Best scalable operational engine for a human-centric, two-sided music instruction marketplace.",
     items: [
       "SteelSeries Apex 3 TKL RGB Gaming Keyboard",
       "Engineering Internship Interview at Prenora Dynamics",
@@ -39,14 +44,25 @@ const PRIZE_DATA = [
   },
   {
     place: "TunerBench Challenge",
+    description: "Best pretrained model on a specific task through fine-tuning.",
     items: [
       "AI Tracking WebCam",
     ],
   },
   {
     place: "Girls Who Code Challenge",
+    description: "Build a project that represents inclusivity.",
     items: [
       "Flower Lego Building Set",
+    ],
+  },
+  {
+    place: "Best Use of Tavily",
+    description: "Build a project that leverages Tavily's APIs in a creative and impactful way.",
+    items: [
+      "1st Place: 10,000 API credits",
+      "2nd Place: 5,000 API credits",
+      "3rd Place: 3,000 API credits",
     ],
   },
 ];
@@ -67,7 +83,7 @@ function Prizes() {
         />
         <div className="flex flex-col items-center">
           <p className="text-center text-[clamp(20px,4vw,60px)] font-bold text-[#5d0801] mb-4 md:mb-8">
-            $13K+ worth of prizes
+            $25K+ worth of prizes
           </p>
 
           {/* Tabs */}
@@ -105,6 +121,11 @@ function Prizes() {
           </div>
 
           {/* Prize Details */}
+          {PRIZE_DATA[activeTab].description && (
+            <p className="text-[#5d0801] text-[clamp(13px,1.8vw,20px)] font-bold mb-2 px-2">
+              {PRIZE_DATA[activeTab].description}
+            </p>
+          )}
           <ul className="list-disc list-inside text-[#5d0801] text-[clamp(13px,1.8vw,20px)] space-y-2 px-2">
             {PRIZE_DATA[activeTab].items.map((item, i) => (
               <li key={i}>{item}</li>
