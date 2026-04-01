@@ -6,7 +6,7 @@ function About(){
     return (
       <section id="about" className="relative w-full">
         <img
-          src="/images/about(no text).svg"
+          src="/images/aboutt.svg"
           alt="About"
           className="block h-full w-full"
           loading="eager"
