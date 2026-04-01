@@ -46,6 +46,20 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
+        <a href="https://tunerbench.com/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/tunerbench-wordmark.svg"
+            alt="TunerBench"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
+        <a href="https://girlswhocode.com/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/Girls_Who_Code_Logo.png"
+            alt="Girls Who Code"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         </div>
       </div>
     </section>
