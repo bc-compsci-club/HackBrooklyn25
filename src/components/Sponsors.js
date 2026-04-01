@@ -11,6 +11,13 @@ function Sponsors() {
           className="hidden md:block h-[clamp(150px,20vw,300px)] w-auto object-contain"
         />
         <div className="grid grid-cols-2 md:grid-cols-3 items-center justify-items-center gap-8 md:gap-16">
+        <a href="https://www.tavily.com/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/tavily.png"
+            alt="Tavily"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         <a href="https://elevenlabs.io/" target="_blank" rel="noopener noreferrer">
           <img
             src="/images/sponsors/elevenlabs-logo-black.svg"
@@ -22,13 +29,6 @@ function Sponsors() {
           <img
             src="/images/sponsors/featherless-full-original.svg"
             alt="Featherless AI"
-            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
-          />
-        </a>
-        <a href="https://www.prenoradynamics.com/" target="_blank" rel="noopener noreferrer">
-          <img
-            src="/images/sponsors/Asset 6_4x.avif"
-            alt="Prenora Dynamics"
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
@@ -57,6 +57,13 @@ function Sponsors() {
           <img
             src="/images/sponsors/Girls_Who_Code_Logo.png"
             alt="Girls Who Code"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
+        <a href="https://www.prenoradynamics.com/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/Asset 6_4x.avif"
+            alt="Prenora Dynamics"
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
