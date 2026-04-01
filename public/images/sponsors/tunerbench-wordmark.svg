@@ -1,0 +1,41 @@
+<svg viewBox="0 0 206 50" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title id="title">TunerBench logo lockup</title>
+  <defs>
+    <linearGradient id="logo-gradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#ff652c"/>
+      <stop offset="100%" stop-color="#ff8d35"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(25, 28)">
+    <path
+      fill="none"
+      stroke="url(#logo-gradient)"
+      stroke-width="4"
+      stroke-linecap="round"
+      d="M-14,7 A16,16 0 1,1 14,7"
+    />
+    <line
+      x1="0"
+      y1="0"
+      x2="7"
+      y2="-9"
+      stroke="url(#logo-gradient)"
+      stroke-width="3"
+      stroke-linecap="round"
+    />
+    <circle cx="0" cy="0" r="3" fill="url(#logo-gradient)"/>
+  </g>
+
+  <text
+    x="48"
+    y="31.5"
+    fill="#2a2f38"
+    font-family="'Space Grotesk', 'Trebuchet MS', sans-serif"
+    font-size="24"
+    font-weight="600"
+    letter-spacing="-0.01em"
+  >
+    TunerBench
+  </text>
+</svg>
