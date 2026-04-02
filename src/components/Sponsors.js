@@ -74,6 +74,13 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
+        <a href="https://www.instagram.com/jjay.css/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/john_jay.png"
+            alt="John Jay College"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         </div>
       </div>
     </section>
