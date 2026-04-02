@@ -5,7 +5,7 @@ const PRIZE_DATA = [
     place: "1st Place",
     description: "Best Overall Hack",
     items: [
-      "Logitech Superlight 2 Mouse",
+      "Logitech Superlight Mouse",
       "Keychron V1 Max Keyboard",
       "3 months of ElevenLabs Pro tier ($297 value/team member)",
       "Featherless credits worth $300",
@@ -96,7 +96,7 @@ function Prizes() {
                 className={`px-3 py-1.5 md:px-6 md:py-3 rounded-full font-bold text-[clamp(11px,1.5vw,18px)] transition-colors duration-300 ${
                   activeTab === i
                     ? "bg-[#5d0801] text-white"
-                    : "bg-white/60 text-[#5d0801] hover:bg-white/80"
+                    : "bg-white/60 text-[#5d0801] hover:bg-[#f5d0a9]"
                 }`}
               >
                 {prize.place}
@@ -112,7 +112,7 @@ function Prizes() {
                 className={`px-3 py-1.5 md:px-6 md:py-3 rounded-full font-bold text-[clamp(11px,1.5vw,18px)] transition-colors duration-300 ${
                   activeTab === i + 3
                     ? "bg-[#5d0801] text-white"
-                    : "bg-white/60 text-[#5d0801] hover:bg-white/80"
+                    : "bg-white/60 text-[#5d0801] hover:bg-[#f5d0a9]"
                 }`}
               >
                 {prize.place}
@@ -121,16 +121,18 @@ function Prizes() {
           </div>
 
           {/* Prize Details */}
-          {PRIZE_DATA[activeTab].description && (
-            <p className="text-[#5d0801] text-[clamp(13px,1.8vw,20px)] font-bold mb-2 px-2">
-              {PRIZE_DATA[activeTab].description}
-            </p>
-          )}
-          <ul className="list-disc list-inside text-[#5d0801] text-[clamp(13px,1.8vw,20px)] space-y-2 px-2">
-            {PRIZE_DATA[activeTab].items.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
+          <div className="min-h-[180px] md:min-h-[200px]">
+            {PRIZE_DATA[activeTab].description && (
+              <p className="text-[#5d0801] text-[clamp(13px,1.8vw,20px)] font-bold mb-2 px-2">
+                {PRIZE_DATA[activeTab].description}
+              </p>
+            )}
+            <ul className="list-disc list-inside text-[#5d0801] text-[clamp(13px,1.8vw,20px)] space-y-2 px-2">
+              {PRIZE_DATA[activeTab].items.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
