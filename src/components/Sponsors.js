@@ -46,6 +46,13 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
+        <a href="https://www.bloomberg.com/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/bloomberg.png"
+            alt="Bloomberg"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         <a href="https://tunerbench.com/" target="_blank" rel="noopener noreferrer">
           <img
             src="/images/sponsors/tunerbench-wordmark.svg"
