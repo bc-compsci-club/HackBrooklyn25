@@ -197,16 +197,16 @@ function FAQ() {
             />
           </div>
 
-          <div className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="relative z-10 grid grid-cols-1 gap-4 md:grid-cols-2 min-h-[400px] md:min-h-[500px]">
           {FAQ_DATA.map((block) => (
             <div
               key={block.category}
               className="rounded-lg border border-[#9D7E67] bg-[#936656]/30 p-3 md:p-4"
             >
-              <h3 className="mb-2 border-b border-[#8b6f47] pb-1.5 text-[clamp(16px,2vw,19px)] font-semibold text-[#2a0f0a]">
+              <h3 className="mb-2 border-b border-[#8b6f47] pb-1.5 text-[clamp(16px,2vw,19px)] font-semibold text-white">
                 {block.category}
               </h3>
-              <div className="max-h-[min(38vh,280px)] overflow-y-auto pr-1 md:max-h-[min(42vh,320px)]">
+              <div className="h-[min(38vh,280px)] overflow-y-auto pr-1 md:h-[min(42vh,320px)]">
                 {block.items.map((item, idx) => {
                   const key = `${block.category}-${idx}`;
                   return (
