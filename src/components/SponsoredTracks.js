@@ -83,7 +83,7 @@ function SponsoredTracks() {
                 onClick={() => setActive(i)}
                 className="flex items-center gap-3 group text-left transition-all duration-300 py-3 px-3 rounded-lg"
                 style={{
-                  background: isActive ? "rgba(0,0,0,0.30)" : "transparent",
+                  background: isActive ? "rgba(52,32,24,0.70)" : "transparent",
                 }}
               >
                 {/* Line + station dot column */}
@@ -137,7 +137,7 @@ function SponsoredTracks() {
           <div
             className="w-full rounded-2xl p-6 md:p-10 transition-all duration-500 min-h-[260px]"
             style={{
-              backgroundColor: "rgba(0,0,0,0.30)",
+              backgroundColor: "rgba(52,32,24,0.70)",
               borderLeft: `6px solid ${SPONSORED_TRACKS[active].color}`,
             }}
           >
