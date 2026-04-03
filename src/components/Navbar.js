@@ -6,14 +6,15 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { href: "#hero", label: "Home" },
     { href: "#about", label: "About" },
     { href: "#tracks", label: "Tracks" },
+    { href: "#prizes", label: "Prizes" },
     { href: "#faq", label: "FAQ" },
+    { href: "#sponsors", label: "Sponsors" },
   ];
 
   return (
-    <nav className="sticky top-0 z-[2000] bg-[#2c3e50] px-[15px] py-2">
+    <nav className="fixed top-0 left-0 right-0 z-[2000] bg-[#2c3e50] px-[15px] py-2">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between">
         <span className="text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA]">
           Hack Brooklyn
@@ -25,7 +26,7 @@ function Navbar() {
             <a
               key={label}
               href={href}
-              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out"
+              className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out hover:text-white hover:bg-white/10"
             >
               {label}
             </a>
