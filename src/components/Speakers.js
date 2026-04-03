@@ -55,6 +55,12 @@ const SPEAKERS = [
     company: "Canvas Cloud AI, Oracle",
     image: "/images/speakers/kevin_brown.jpeg",
   },
+    {
+    name: "Praneetha Kotla",
+    title: "Robotic Process Automation Developer",
+    company: "Johnson & Johnson, Corewell Health",
+    image: "/images/speakers/praneetha_kotla.jpeg",
+  },
 ];
 
 function Speakers() {
