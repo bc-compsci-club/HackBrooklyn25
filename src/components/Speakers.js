@@ -55,7 +55,7 @@ const SPEAKERS = [
     company: "Canvas Cloud AI, Oracle",
     image: "/images/speakers/kevin_brown.jpeg",
   },
-    {
+  {
     name: "Praneetha Kotla",
     title: "Robotic Process Automation Developer",
     company: "Johnson & Johnson, Corewell Health",
@@ -68,9 +68,25 @@ function Speakers() {
   const [isPaused, setIsPaused] = useState(false);
   const isPausedRef = useRef(false);
   const positionRef = useRef(0);
+  const segmentWidthRef = useRef(0);
   const isDragging = useRef(false);
   const dragStartX = useRef(0);
   const dragStartPos = useRef(0);
+
+  const normalizePosition = (nextPosition) => {
+    const segmentWidth = segmentWidthRef.current;
+    if (!segmentWidth) return nextPosition;
+
+    let normalized = nextPosition;
+    while (normalized <= -2 * segmentWidth) {
+      normalized += segmentWidth;
+    }
+    while (normalized > -segmentWidth) {
+      normalized -= segmentWidth;
+    }
+
+    return normalized;
+  };
 
   useEffect(() => {
     isPausedRef.current = isPaused;
@@ -83,20 +99,28 @@ function Speakers() {
     let animationId;
     const speed = 0.5;
 
+    const updateTrackMetrics = () => {
+      segmentWidthRef.current = track.scrollWidth / 3;
+      positionRef.current = normalizePosition(positionRef.current);
+      track.style.transform = `translateX(${positionRef.current}px)`;
+    };
+
+    updateTrackMetrics();
+
     const animate = () => {
       if (!isPausedRef.current && !isDragging.current) {
-        positionRef.current -= speed;
-        const halfWidth = track.scrollWidth / 2;
-        if (Math.abs(positionRef.current) >= halfWidth) {
-          positionRef.current = 0;
-        }
+        positionRef.current = normalizePosition(positionRef.current - speed);
         track.style.transform = `translateX(${positionRef.current}px)`;
       }
       animationId = requestAnimationFrame(animate);
     };
 
+    window.addEventListener("resize", updateTrackMetrics);
     animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener("resize", updateTrackMetrics);
+    };
   }, []);
 
   const handleMouseDown = (e) => {
@@ -110,11 +134,8 @@ function Speakers() {
     if (!isDragging.current) return;
     const delta = e.clientX - dragStartX.current;
     const track = trackRef.current;
-    positionRef.current = dragStartPos.current + delta;
-    const halfWidth = track.scrollWidth / 2;
-    if (Math.abs(positionRef.current) >= halfWidth) {
-      positionRef.current = 0;
-    }
+    if (!track) return;
+    positionRef.current = normalizePosition(dragStartPos.current + delta);
     track.style.transform = `translateX(${positionRef.current}px)`;
   };
 
@@ -134,11 +155,8 @@ function Speakers() {
     if (!isDragging.current) return;
     const delta = e.touches[0].clientX - dragStartX.current;
     const track = trackRef.current;
-    positionRef.current = dragStartPos.current + delta;
-    const halfWidth = track.scrollWidth / 2;
-    if (Math.abs(positionRef.current) >= halfWidth) {
-      positionRef.current = 0;
-    }
+    if (!track) return;
+    positionRef.current = normalizePosition(dragStartPos.current + delta);
     track.style.transform = `translateX(${positionRef.current}px)`;
   };
 
@@ -148,18 +166,26 @@ function Speakers() {
   };
 
   // Duplicate speakers for seamless loop
-  const allSpeakers = [...SPEAKERS, ...SPEAKERS];
+  const allSpeakers = [...SPEAKERS, ...SPEAKERS, ...SPEAKERS];
 
   return (
-    <section id="speakers" className="w-full bg-[#644741] py-32 md:py-56 overflow-hidden">
+    <section
+      id="speakers"
+      className="w-full bg-[#644741] py-32 md:py-56 overflow-hidden"
+    >
       <h2 className="text-center text-[clamp(36px,6vw,80px)] font-bold font-spenbebgame text-white mb-12">
         MENTORS
       </h2>
 
       <div
         className="relative w-full cursor-grab active:cursor-grabbing select-none"
-        onMouseEnter={() => { if (!isDragging.current) setIsPaused(true); }}
-        onMouseLeave={() => { isDragging.current = false; setIsPaused(false); }}
+        onMouseEnter={() => {
+          if (!isDragging.current) setIsPaused(true);
+        }}
+        onMouseLeave={() => {
+          isDragging.current = false;
+          setIsPaused(false);
+        }}
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -167,7 +193,10 @@ function Speakers() {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div ref={trackRef} className="flex w-max gap-8 px-4 pointer-events-none">
+        <div
+          ref={trackRef}
+          className="flex w-max gap-8 px-4 pointer-events-none"
+        >
           {allSpeakers.map((speaker, i) => (
             <div
               key={i}
@@ -180,9 +209,15 @@ function Speakers() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <p className="text-white font-bold text-lg text-center">{speaker.name}</p>
-              <p className="text-white/80 text-sm text-center">{speaker.title}</p>
-              <p className="text-white/60 text-sm text-center">{speaker.company}</p>
+              <p className="text-white font-bold text-lg text-center">
+                {speaker.name}
+              </p>
+              <p className="text-white/80 text-sm text-center">
+                {speaker.title}
+              </p>
+              <p className="text-white/60 text-sm text-center">
+                {speaker.company}
+              </p>
             </div>
           ))}
         </div>
