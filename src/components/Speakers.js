@@ -50,10 +50,10 @@ const SPEAKERS = [
     image: "/images/speakers/robert-cavallito.jpeg",
   },
   {
-    name: "Abhijit Chanda",
-    title: "Director of AI & Data Analytics",
-    company: "Tredence",
-    image: "/images/speakers/abhijit-chanda.jpeg",
+    name: "Kevin Brown",
+    title: "Founder, Senior Cloud Engineer",
+    company: "Canvas Cloud AI, Oracle",
+    image: "/images/speakers/kevin_brown.jpeg",
   },
 ];
 
@@ -117,6 +117,30 @@ function Speakers() {
     setIsPaused(false);
   };
 
+  const handleTouchStart = (e) => {
+    isDragging.current = true;
+    dragStartX.current = e.touches[0].clientX;
+    dragStartPos.current = positionRef.current;
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging.current) return;
+    const delta = e.touches[0].clientX - dragStartX.current;
+    const track = trackRef.current;
+    positionRef.current = dragStartPos.current + delta;
+    const halfWidth = track.scrollWidth / 2;
+    if (Math.abs(positionRef.current) >= halfWidth) {
+      positionRef.current = 0;
+    }
+    track.style.transform = `translateX(${positionRef.current}px)`;
+  };
+
+  const handleTouchEnd = () => {
+    isDragging.current = false;
+    setIsPaused(false);
+  };
+
   // Duplicate speakers for seamless loop
   const allSpeakers = [...SPEAKERS, ...SPEAKERS];
 
@@ -133,6 +157,9 @@ function Speakers() {
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         <div ref={trackRef} className="flex w-max gap-8 px-4 pointer-events-none">
           {allSpeakers.map((speaker, i) => (
