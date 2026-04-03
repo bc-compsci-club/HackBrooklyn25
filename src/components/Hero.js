@@ -24,7 +24,7 @@ function Hero() {
   }, []);
 
   return (
-    <div className="relative w-full" id="hero">
+    <div className="relative w-full pt-12" id="hero">
       <img src="/images/hero(final).svg" alt="Hero" className="block h-auto w-full" />
       <div
         className="absolute flex items-center justify-center flex-wrap z-10 opacity-0 animate-lampReveal"
