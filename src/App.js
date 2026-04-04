@@ -8,6 +8,7 @@ import Speakers from "./components/Speakers";
 import Prizes from "./components/Prizes";
 import FAQ from "./components/FAQ";
 import Sponsors from "./components/Sponsors";
+import GoogleMap from "./components/GoogleMap";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Navbar/>
       <Hero/>
       <About/>
+      <GoogleMap/>
       <Tracks/>
       <SponsoredTracks/>
       <Speakers/>
