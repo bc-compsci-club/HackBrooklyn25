@@ -32,11 +32,11 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
-        <a href="https://www.bcstudentgov.org/" target="_blank" rel="noopener noreferrer">
+        <a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer">
           <img
-            src="/images/sponsors/usg.png"
-            alt="USG"
-            className="h-[clamp(70px,16vw,150px)] w-auto object-contain hover:opacity-80 transition-opacity"
+            src="/images/sponsors/lovable-dark-png.png"
+            alt="Lovable"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
         <a href="https://www.redbull.com/us-en" target="_blank" rel="noopener noreferrer">
@@ -81,11 +81,11 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
-        <a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.bcstudentgov.org/" target="_blank" rel="noopener noreferrer">
           <img
-            src="/images/sponsors/lovable-dark-png.png"
-            alt="Lovable"
-            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+            src="/images/sponsors/usg.png"
+            alt="USG"
+            className="h-[clamp(70px,16vw,150px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
         <a href="https://www.canvascloud.ai/" target="_blank" rel="noopener noreferrer">
