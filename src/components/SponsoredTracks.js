@@ -47,6 +47,24 @@ const SPONSORED_TRACKS = [
     prize:
       "1st: 10,000 API credits · 2nd: 5,000 API credits · 3rd: 3,000 API credits",
   },
+  {
+    name: "Best Lovable Hack",
+    color: "#FF69B4",
+    letter: "L",
+    sponsor: "Lovable",
+    description:
+      "Build a project using Lovable's AI-powered full-stack app builder to create a polished, production-ready application.",
+    prize: "6 months of Lovable Pro",
+  },
+  {
+    name: "Best Architecture Diagram",
+    color: "#00BCD4",
+    letter: "C",
+    sponsor: "Canvas Cloud AI",
+    description:
+      "Design the best system architecture diagram using Canvas Cloud AI's collaborative diagramming platform.",
+    prize: "Builder Plan credits",
+  },
 ];
 
 function SponsoredTracks() {

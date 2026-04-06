@@ -81,6 +81,20 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
+        <a href="https://lovable.dev/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/lovable-dark-png.png"
+            alt="Lovable"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
+        <a href="https://www.canvascloud.ai/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/canvas-cloud-ai-standard-logo.svg"
+            alt="Canvas Cloud AI"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         </div>
       </div>
     </section>

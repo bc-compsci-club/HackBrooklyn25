@@ -65,6 +65,20 @@ const PRIZE_DATA = [
       "3rd Place: 3,000 API credits",
     ],
   },
+  {
+    place: "Best Lovable Hack",
+    description: "Build a project using Lovable's AI-powered full-stack app builder.",
+    items: [
+      "6 months of Lovable Pro",
+    ],
+  },
+  {
+    place: "Best Architecture Diagram",
+    description: "Design the best system architecture diagram using Canvas Cloud AI.",
+    items: [
+      "Builder Plan credits",
+    ],
+  },
 ];
 
 function Prizes() {
