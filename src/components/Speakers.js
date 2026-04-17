@@ -44,12 +44,6 @@ const SPEAKERS = [
     image: "/images/speakers/kevin_brown.jpeg",
   },
   {
-    name: "Ariel Avshalom",
-    title: "Senior Software Engineer",
-    company: "Google",
-    image: "/images/speakers/Ariel-Avshalom.jpeg",
-  },
-  {
     name: "Ishan Phadke",
     title: "Software Engineer",
     company: "Google",
