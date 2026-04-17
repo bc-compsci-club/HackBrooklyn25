@@ -95,6 +95,20 @@ function Sponsors() {
             className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
           />
         </a>
+        <a href="https://bastanyc.com/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/Basta-1.png"
+            alt="Basta"
+            className="h-[clamp(80px,18vw,170px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
+        <a href="https://www.brooklyncollegefoundation.org/" target="_blank" rel="noopener noreferrer">
+          <img
+            src="/images/sponsors/brooklyn_college_foundation_inc_logo.jpeg"
+            alt="Brooklyn College Foundation"
+            className="h-[clamp(60px,14vw,130px)] w-auto object-contain hover:opacity-80 transition-opacity"
+          />
+        </a>
         </div>
       </div>
     </section>

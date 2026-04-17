@@ -26,12 +26,6 @@ const SPEAKERS = [
     image: "/images/speakers/richie-bielak.png",
   },
   {
-    name: "Muhammad Omar",
-    title: "Software Engineer",
-    company: "Priviom, Wayfair",
-    image: "/images/speakers/muhammad-omar.jpeg",
-  },
-  {
     name: "Dennis Klimenkov",
     title: "Senior Software Enginner",
     company: "The Washington Post",
@@ -44,22 +38,34 @@ const SPEAKERS = [
     image: "/images/speakers/Shahidullah.jpeg",
   },
   {
-    name: "Robert Cavallito",
-    title: "Angel Investor, Founder",
-    company: "Masthead Venture",
-    image: "/images/speakers/robert-cavallito.jpeg",
-  },
-  {
     name: "Kevin Brown",
     title: "Founder, Senior Cloud Engineer",
     company: "Canvas Cloud AI, Oracle",
     image: "/images/speakers/kevin_brown.jpeg",
   },
   {
-    name: "Praneetha Kotla",
-    title: "Robotic Process Automation Developer",
-    company: "Johnson & Johnson, Corewell Health",
-    image: "/images/speakers/praneetha_kotla.jpeg",
+    name: "Ariel Avshalom",
+    title: "Senior Software Engineer",
+    company: "Google",
+    image: "/images/speakers/Ariel-Avshalom.jpeg",
+  },
+  {
+    name: "Ishan Phadke",
+    title: "Software Engineer",
+    company: "Google",
+    image: "/images/speakers/Ishan-Phadke.jpeg",
+  },
+  {
+    name: "Kareem Itani",
+    title: "Software Engineer II",
+    company: "J.P. Morgan",
+    image: "/images/speakers/kareem-itani.jpeg",
+  },
+  {
+    name: "Felix Guo",
+    title: "Software Engineer",
+    company: "Bank of America",
+    image: "/images/speakers/felix-guo.jpeg",
   },
 ];
 

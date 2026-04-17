@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
   const buttonLink =
     "https://docs.google.com/forms/d/e/1FAIpQLScr0RTbU8pG9f6YkxOIIsMqinqDS-8-6cGm4lIjzB0AMDHS3w/viewform";
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
   const navLinks = [
     { href: "#about", label: "About" },
@@ -16,21 +19,27 @@ function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-[2000] bg-[#2c3e50] px-[15px] py-2">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between">
-        <span className="text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA]">
+        <Link to="/" className="text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline">
           Hack Brooklyn
-        </span>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex flex-wrap gap-[clamp(15px,3vw,30px)] items-center">
           {navLinks.map(({ href, label }) => (
             <a
               key={label}
-              href={href}
+              href={isHome ? href : "/" + href}
               className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out hover:text-white hover:bg-white/10"
             >
               {label}
             </a>
           ))}
+          <Link
+            to="/schedule"
+            className="flex items-center rounded-lg px-3 py-2 text-[clamp(15px,1.8vw,19px)] font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out hover:text-white hover:bg-white/10"
+          >
+            Schedule
+          </Link>
           <a
             href={buttonLink}
             target="_blank"
@@ -65,13 +74,20 @@ function Navbar() {
           {navLinks.map(({ href, label }) => (
             <a
               key={label}
-              href={href}
+              href={isHome ? href : "/" + href}
               onClick={() => setMenuOpen(false)}
               className="w-full text-center rounded-lg px-3 py-2 text-base font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out hover:bg-white/10 hover:tracking-wider"
             >
               {label}
             </a>
           ))}
+          <Link
+            to="/schedule"
+            onClick={() => setMenuOpen(false)}
+            className="w-full text-center rounded-lg px-3 py-2 text-base font-medium text-[#FFE5BA] no-underline transition-all duration-300 ease-in-out hover:bg-white/10 hover:tracking-wider"
+          >
+            Schedule
+          </Link>
           <a
             href={buttonLink}
             target="_blank"
